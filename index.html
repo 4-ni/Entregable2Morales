@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador — Carrito</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="wrap">
+    <h1>Carrito de Compras</h1>
+  </header>
+
+  <main class="wrap grid">
+    <!-- Catálogo -->
+    <section class="card">
+      <h2>Catálogo</h2>
+
+      <input id="filtro" type="search" placeholder="Filtrar por nombre..." class="input">
+      <ul id="listaProductos" class="lista"></ul>
+
+      <hr>
+      <h3>Agregar producto al catálogo</h3>
+      <form id="formProducto" class="form">
+        <label>Nombre
+          <input id="nombreProducto" required maxlength="40" class="input" placeholder="Ej: Café">
+        </label>
+        <label>Precio (CLP)
+          <input id="precioProducto" type="number" min="1" step="1" required class="input" placeholder="Ej: 1200">
+        </label>
+        <button class="btn">Agregar</button>
+      </form>
+    </section>
+
+    <!-- Carrito -->
+    <section class="card">
+      <h2>Carrito</h2>
+      <p id="carritoVacio" class="muted">Tu carrito está vacío.</p>
+      <table id="tablaCarrito" class="tabla" hidden>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cant.</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoCarrito"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="der"><strong>Total</strong></td>
+            <td id="totalCarrito">$0</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="acciones">
+        <button id="btnVaciar" class="btn rojo">Vaciar</button>
+        <button id="btnComprar" class="btn verde">Finalizar compra</button>
+      </div>
+    </section>
+
+    <!-- Órdenes -->
+    <section class="card">
+      <h2>Órdenes</h2>
+      <ul id="listaOrdenes" class="lista"></ul>
+    </section>
+  </main>
+
+  <!-- Mensaje -->
+  <div id="msg" class="msg" aria-live="polite"></div>
+
+  <footer class="wrap">
+    <small>Entrega N°2 Ana Morales</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

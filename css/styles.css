@@ -1,0 +1,118 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #222;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Layout */
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: #333;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.muted {
+  color: #bbb;
+}
+
+/* Inputs y botones */
+.input {
+  width: 100%;
+  padding: 6px;
+  margin: 4px 0;
+}
+
+.btn {
+  padding: 6px 10px;
+  border: none;
+  background: #555;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #777;
+}
+
+.rojo {
+  background: #a33;
+}
+
+.verde {
+  background: #3a3;
+}
+
+/* Listas y tablas */
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  background: #444;
+  padding: 6px;
+}
+
+.precio {
+  color: #6cf;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+  padding: 6px;
+  border: 1px solid #555;
+}
+
+.der {
+  text-align: right;
+}
+
+/* Mensajes */
+.msg {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #444;
+  padding: 6px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.msg.show {
+  opacity: 1;
+}
